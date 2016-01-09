@@ -23,7 +23,7 @@ for line in sys.stdin:
 
 	# print key_in
 	if len(key_in) >= 2: # if this entry has <date word> in key
-		date = key[0] # now get date from key field
+		date = key_in[0] # now get date from key field
 		word = key_in[1] 
 		value_out = date + " " + value_in # concatenate date, blank, and value_in
 
