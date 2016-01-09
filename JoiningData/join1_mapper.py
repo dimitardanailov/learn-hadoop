@@ -17,7 +17,7 @@ import sys
 
 for line in sys.stdin:
 	line = line.strip() # strip out carriage return
-	key_value = line.spilit(",") # split line, into key and value, returns list
+	key_value = line.split(",") # split line, into key and value, returns list
 	key_in = key_value[0].split(" ") # key is first item in list
 	value_in = key_value[1] # value is 2nd item
 
