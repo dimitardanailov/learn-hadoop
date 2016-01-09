@@ -52,7 +52,7 @@ for line in sys.stdin:
 		# now write out the join result, but not for the first line input
 		# -----------------------
 		if line_cnt > 1:
-			for i in rainge(len(dates_to_output)): # loop thru dates, indexes start at 0
+			for i in range(len(dates_to_output)): # loop thru dates, indexes start at 0
 				print('{0} {1} {2} {3}'.format(dates_to_output[i],prev_word,day_cnts_to_output[i],curr_word_total_cnt))
 			# now reset list
 			dates_to_output = []
