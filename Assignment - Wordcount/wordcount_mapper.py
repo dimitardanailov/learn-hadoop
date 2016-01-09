@@ -13,21 +13,21 @@ import sys
 #  this 'for loop' will set 'line' to an input line from system 
 #  standard input file
 # ------------------------------------------------------------
-for line in sys.stdin: 
+for line in sys.stdin:
+    
+  # -----------------------------------
+  # sys.stdin call 'sys' to read a line from standard input, 
+  # note that 'line' is a string object, ie variable, and it has methods that you can apply to it,
+  # as in the next line
+  # -----------------------------------
+  line = line.strip() # strip is a method, ie function, associated
+                      # with string variable, it will strip 
+                      # the carriage return (by default)
 
-# -----------------------------------
-# sys.stdin call 'sys' to read a line from standard input, 
-# note that 'line' is a string object, ie variable, and it has methods that you can apply to it,
-# as in the next line
-# -----------------------------------
-    line = line.strip() # strip is a method, ie function, associated
-                        # with string variable, it will strip 
-                        # the carriage return (by default)
+  keys = line.split() # split line at blanks (by default), and return a list of keys
 
-    keys = line.split() # split line at blanks (by default), and return a list of keys
-
-    for key in keys:
-        value = 1
-        # the {} is replaced by 0th,1st items in format list
-        # also, note that the Hadoop default is 'tab' separates key from the value
-        print('{0}\t{1}'.format(key, value)) 
+  for key in keys:
+      value = 1
+      # the {} is replaced by 0th,1st items in format list
+      # also, note that the Hadoop default is 'tab' separates key from the value
+      print('{0}\t{1}'.format(key, value)) 
