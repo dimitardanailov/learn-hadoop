@@ -1,14 +1,16 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+File: join2_mapper.py
+Email: i(at)huxuan.org
+Description: Mapper function.
+"""
 import sys
-shows = []
 
 for line in sys.stdin:
-    line       = line.strip()
-    key_value  = line.split(',')
+    tv_show, value = line.split(',')
+    tv_show = tv_show.strip()
+    value = value.strip()
 
-    if key_value[1] == 'ABC':
-        if key_value[1] not in shows:
-            shows.append(key_value[0])
-
-    if key_value[1].isdigit() and (key_value[0] in shows):
-        print('{0}\t{1}'.format(key_value[0], key_value[1]) )
+    if value.isdigit() or value == 'ABC':
+        print('{0}\t{1}'.format(tv_show, value))
